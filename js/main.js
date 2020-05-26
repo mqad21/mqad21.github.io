@@ -37,7 +37,7 @@
 		modal.find('.p-demo').html(linkDemo);
 	})
 
-	const URL_API = "http://api.mqad21.my.id/github/portfolio.php"
+	const URL_API = "https://api.mqad21.my.id/github/portfolio.php"
 
 	$.ajax({
 		url: URL_API,
