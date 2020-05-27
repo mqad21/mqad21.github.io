@@ -45,8 +45,9 @@
 		success: (result) => {
 			var portfolio = result.records;
 			console.log(portfolio);
+			var workBoxCont = "";
 			portfolio.forEach((p) => {
-				$("#work-box-cont").html(`
+				workBoxCont += `
 				<div class="col-md-4">
 					<div class="work-box" data-toggle="modal"
 					data-title="${p.title}"
@@ -78,8 +79,9 @@
 					</div>
 					</div>
 				</div>	
-			`)
+			`
 			});
+			$("#work-box-cont").html(workBoxCont);
 		}
 	});
 
