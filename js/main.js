@@ -50,7 +50,6 @@
 		dataType: 'json',
 		success: (result) => {
 			var portfolio = result.records;
-			console.log(portfolio);
 			var workBoxCont = "";
 			portfolio.forEach((p) => {
 				workBoxCont += `
