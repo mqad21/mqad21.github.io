@@ -37,6 +37,12 @@
 		modal.find('.p-demo').html(linkDemo);
 	})
 
+	function fixDate(date) {
+		var d = new Date(date);
+		var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+		return months[d.getMonth()] + " " + d.getFullYear();
+	}
+
 	const URL_API = "https://api.mqad21.my.id/github/portfolio.php"
 
 	$.ajax({
@@ -51,7 +57,7 @@
 				<div class="col-md-4">
 					<div class="work-box" data-toggle="modal"
 					data-title="${p.title}"
-					data-date="${p.date}"
+					data-date="${fixDate(p.date)}"
 					data-cat="${p.category}"
 					data-desc="${p.description}"
 					data-feature="${p.feature}"
@@ -67,7 +73,7 @@
 						<div class="col-sm-8">
 							<h2 class="w-title">${p.title}</h2>
 							<div class="w-more">
-							<span class="w-ctegory">${p.category}</span> / <span class="w-date">${p.date}</span>
+							<span class="w-ctegory">${p.category}</span> / <span class="w-date">${fixDate(p.date)}</span>
 							</div>
 						</div>
 						<div class="col-sm-4">
